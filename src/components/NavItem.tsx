@@ -1,18 +1,18 @@
 
 import Button from "./ui/Button.tsx";
+import {NavLink} from "react-router";
 
 interface NavItemProps {
     itemTitle: string;
 }
 
 const NavItem = ({itemTitle}: NavItemProps) => {
+        return (
+            <NavLink to={`/${itemTitle.toLowerCase()}`}>
+                <Button>{itemTitle}</Button>
+            </NavLink>
 
-    return (
-        <a href={`/${itemTitle.toLowerCase()}`}>
-            <Button>{itemTitle}</Button>
-        </a>
-
-    )
+        )
 }
 
 export default NavItem;
