@@ -8,9 +8,10 @@ import friend6 from '../assets/friend6.jpg'
 import friend7 from '../assets/friend7.jpg'
 import friend8 from '../assets/friend8.jpg'
 import friend9 from '../assets/friend9.jpg'
+import type {Hero} from "./types.d.tsx";
 export const baseUrl = 'https://sw-info-api.herokuapp.com';
 export const version = '/v1';
-export const characters = {
+export const characters: Record<string, Hero> = {
     luke: {
         name: "Luke Skywalker",
         img: friend0,
